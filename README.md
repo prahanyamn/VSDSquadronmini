@@ -149,11 +149,32 @@ This code serves as a fundamental illustration of how an automated ticket vendin
 + Compile the C-program using the command: `gcc ticketterminal.c`
 +  To obtain the results use the command `./a.out`
   
-![WhatsApp Image 2024-06-25 at 16 37 40_ac949411](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/3ac5c26c-31bb-4eb9-8075-98c9012cc48e)
+![WhatsApp Image 2024-06-25 at 16 37 39_116cefac](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/09e2301c-7311-4d2c-9cd8-65be77632222)
+
 
 ### Conversion of the C program to RISC V instruction set
 
 To convert the C program to RISC V instruction set, type `riscv64-unknown-elf-gcc -o1 -mabi=lp64 -march=rv64i -o ticketterminal.o ticketterminal.c`
+
+![WhatsApp Image 2024-06-25 at 18 13 12_ade9c524](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/6704d4a1-6995-448c-aaca-0bb96268f06d)
+
+Now, switch focus to executing the main function and performing calculations using this command: `riscv64-unknown-elf-objdump -d ticketterminal.o |less`
+
+![image](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/782f66b9-83dc-404e-924b-77669d12f98a)
+
+![image](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/93f53b72-77ab-44ec-aeca-125f09e7338a)
+
++ Calculation for o1 instruction
+  
+  ![image](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/ecc75b6a-baa6-4a40-8483-740d9b4aed16)
+
++
+
+
+
+
+
+
 
 
 
