@@ -65,6 +65,72 @@ To proceed with the C code first install the virtual box. Then open a VDI file i
 ![Calculation of riscv instruction](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/286eee27-b2dd-4d70-807c-ec2ce03865b8)
 
 
+# TASK 2
+
+## PROJECT 1: Ticket Terminal Designer: Developing an Automated Parking Ticket Vending Machine 
+
+The given C program is a straightforward implementation of an Automated Parking Ticket Vending Machine. It includes features for issuing parking tickets, processing payments for the issued tickets, and presents a user interface via a console menu.
+
+# Code
+`#include <stdio.h>
+ #include <stdlib.h>
+
+int current_ticket = 0;
+
+void issue_ticket() {
+    current_ticket++;
+    printf("Ticket issued: %d\n", current_ticket);
+}
+
+void pay_ticket(int ticket_number) {
+    if (ticket_number <= current_ticket && ticket_number > 0) {
+        printf("Ticket %d has been paid.\n", ticket_number);
+    } else {
+        printf("Invalid ticket number.\n");
+    }
+}
+
+void show_menu() {
+    printf("1. Issue Ticket\n");
+    printf("2. Pay Ticket\n");
+    printf("3. Exit\n");
+}
+
+int main() {
+    int choice, ticket_number;
+
+    while (1) {
+        show_menu();
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                issue_ticket();
+                break;
+            case 2:
+                printf("Enter ticket number to pay: ");
+                scanf("%d", &ticket_number);
+                pay_ticket(ticket_number);
+                break;
+            case 3:
+                exit(0);
+            default:
+                printf("Invalid choice. Please try again.\n");
+        }
+    }
+
+    return 0;
+}`
+
++ The menu is displayed to the user.
++ The user enters a choice.
++ Based on the user's choice:
+       ++ A new ticket is issued.
+       ++ A specific ticket is marked as paid.
+       ++ The program exits.
+       ++ An error message is shown for invalid choices.
++ The loop continues until the user chooses to exit.
 
 
 
