@@ -27,4 +27,27 @@ Likely includes a JTAG (Joint Test Action Group) interface for debugging purpose
 
 Write a C program to execute of sum 1 to N.
 
-To proceed with the C code first install the virtual box.
+To proceed with the C code first install the virtual box. Then open a VDI file in Ubuntu using VirtualBox.
+
+### 1. Virtual Box has been installed
+![Virtual box installation](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/f8f0f23e-8b3a-4d4e-8b80-44c21a942189)
+
+### 2. Ubuntu has been installed.
+![Installation of Ubuntu](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/b0ff7e87-2ba4-41bf-88d2-e5b1ae820dfe)
+
+### 3. Open the terminal window.
+![Terminal](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/1dd93461-bcf0-4718-8057-f4a1e8d0f4e1)
+
+### 4. C code to execute the sum of numbers from 1 to N
+
++ First install leafpad using the command: `sudo snap install leafpad`
++ Create the file using leafpad with the help of following command: `leafpad sum1ton.c &`
++ Write the program and save the same.
+
+![C Program for Sum of 1 to N](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/8827f669-9a6a-4646-a3be-e45cbbb19321)
+
+
+
+
+
+
