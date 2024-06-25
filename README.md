@@ -65,6 +65,8 @@ To proceed with the C code first install the virtual box. Then open a VDI file i
 ![Calculation of riscv instruction](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/286eee27-b2dd-4d70-807c-ec2ce03865b8)
 
 
+By following these steps, you will establish a virtual environment with the RISC-V toolchain prepared for development. This configuration enables you to compile and test RISC-V programs.
+
 # TASK 2
 
 ## PROJECT 1: Ticket Terminal Designer: Developing an Automated Parking Ticket Vending Machine 
@@ -168,7 +170,16 @@ Now, switch focus to executing the main function and performing calculations usi
   
   ![image](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/ecc75b6a-baa6-4a40-8483-740d9b4aed16)
 
-+
++ To obtain the difference execute the same function using the -Ofast function like given below `riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o ticketterminal.o ticketterminal.c`
+
+  ![image](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/fdd610fc-e7b9-4c92-84e8-7feca4c3bef4)
+  
+  ![image](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/ceaefe43-7f4e-4b1f-9a87-d2464811311e)
+
++ By comparing both main functions, we observe that the Ofast function has been optimized for fewer numbers.
+
+
+The given C program effectively illustrates the essential functions of an Automated Parking Ticket Vending Machine. By employing basic functions and a console-based menu interface, the code offers a straightforward and user-friendly method for issuing parking tickets and handling their payments.
 
 
 
