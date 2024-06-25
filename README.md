@@ -71,7 +71,7 @@ To proceed with the C code first install the virtual box. Then open a VDI file i
 
 The given C program is a straightforward implementation of an Automated Parking Ticket Vending Machine. It includes features for issuing parking tickets, processing payments for the issued tickets, and presents a user interface via a console menu.
 
-# Code
+### Code
 `#include <stdio.h>
  #include <stdlib.h>
 
