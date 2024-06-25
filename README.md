@@ -38,7 +38,7 @@ To proceed with the C code first install the virtual box. Then open a VDI file i
 ### 3. Open the terminal window.
 ![Terminal](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/1dd93461-bcf0-4718-8057-f4a1e8d0f4e1)
 
-### 4. C code to execute the sum of numbers from 1 to N
+### 4. C program to execute the sum of numbers from 1 to N
 
 + First install leafpad using the command: `sudo snap install leafpad`
 + Create the file using leafpad with the help of following command: `leafpad sum1ton.c &`
@@ -46,7 +46,16 @@ To proceed with the C code first install the virtual box. Then open a VDI file i
 
 ![C Program for Sum of 1 to N](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/8827f669-9a6a-4646-a3be-e45cbbb19321)
 
+### 5. Output of the C program
 
++ Compile the C-program using the command: `gcc sum1ton.c`
++ To obtain the results use the command `./a.out`
+
+![Fast Instruction](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/080b0214-3d89-4766-a3ec-9c0a1a4e98d8)
+
+### 6. Conversion of the C program to RISC V instruction set
+
++ To convert the C program to RISC V instruction set, type `riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c`
 
 
 
