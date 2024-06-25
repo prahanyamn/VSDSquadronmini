@@ -130,13 +130,10 @@ int main() {
 + The menu is displayed to the user.
 + The user enters a choice.
 + Based on the user's choice:
-        A new ticket is issued.
-  
-        A specific ticket is marked as paid.
-  
-        The program exits.
-  
-        An error message is shown for invalid choices.
+      -  A new ticket is issued.
+      -  A specific ticket is marked as paid.
+      -  The program exits.
+      -  An error message is shown for invalid choices.
   
 + The loop continues until the user chooses to exit.
   
