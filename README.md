@@ -137,9 +137,24 @@ int main() {
 ![WhatsApp Image 2024-06-25 at 16 18 09_a1e42721](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/0efe569f-7884-47dd-9392-b81b9b7aa702)
 ![WhatsApp Image 2024-06-25 at 16 18 09_f59f14a5](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/c79ab8ad-4b2a-4489-926b-01a737251310)
 
+This code serves as a fundamental illustration of how an automated ticket vending system can be implemented in C. It can be further enhanced with extra features such as ticket validation, payment processing, and database integration for a more comprehensive solution.
+
 ### Output
 
++ Compile the C-program using the command: `gcc ticketterminal.c`
++  To obtain the results use the command `./a.out`
+  
 ![WhatsApp Image 2024-06-25 at 16 37 40_ac949411](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/3ac5c26c-31bb-4eb9-8075-98c9012cc48e)
+
+### Conversion of the C program to RISC V instruction set
+
+To convert the C program to RISC V instruction set, type `riscv64-unknown-elf-gcc -o1 -mabi=lp64 -march=rv64i -o ticketterminal.o ticketterminal.c`
+
+![WhatsApp Image 2024-06-25 at 16 37 39_05370a17](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/417be24a-03cd-4b8c-9314-647d12373e40)
+
+
+
+
 
 
 
