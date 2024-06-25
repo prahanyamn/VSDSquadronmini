@@ -14,10 +14,10 @@ Includes onboard RAM and possibly flash memory for storage of firmware and appli
 
 #### Connectivity:
 Features a range of I/O options, which typically include:
-GPIO (General-Purpose Input/Output) pins
-UART (Universal Asynchronous Receiver-Transmitter)
-SPI (Serial Peripheral Interface)
-I2C (Inter-Integrated Circuit)
++ GPIO (General-Purpose Input/Output) pins
++ UART (Universal Asynchronous Receiver-Transmitter)
++ SPI (Serial Peripheral Interface)
++ I2C (Inter-Integrated Circuit)
 
 #### Programming and Debugging:
 Supports standard RISC-V development tools and toolchains such as GCC, LLVM, and various RISC-V IDEs (Integrated Development Environments).
