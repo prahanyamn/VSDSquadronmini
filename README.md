@@ -137,6 +137,10 @@ int main() {
 ![WhatsApp Image 2024-06-25 at 16 18 09_a1e42721](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/0efe569f-7884-47dd-9392-b81b9b7aa702)
 ![WhatsApp Image 2024-06-25 at 16 18 09_f59f14a5](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/c79ab8ad-4b2a-4489-926b-01a737251310)
 
+### Output
+
+![WhatsApp Image 2024-06-25 at 16 37 40_ac949411](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/3ac5c26c-31bb-4eb9-8075-98c9012cc48e)
+
 
 
 
