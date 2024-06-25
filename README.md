@@ -22,3 +22,9 @@ Features a range of I/O options, which typically include:
 #### Programming and Debugging:
 Supports standard RISC-V development tools and toolchains such as GCC, LLVM, and various RISC-V IDEs (Integrated Development Environments).
 Likely includes a JTAG (Joint Test Action Group) interface for debugging purposes.
+
+# TASK 1
+
+Write a C program to execute of sum 1 to N.
+
+To proceed with the C code first install the virtual box.
