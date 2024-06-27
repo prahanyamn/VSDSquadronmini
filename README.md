@@ -179,6 +179,9 @@ This code serves as a fundamental illustration of how an automated ticket vendin
 The given C program effectively illustrates the essential functions of an Automated Parking Ticket Vending Machine. By employing basic functions and a console-based menu interface, the code offers a straightforward and user-friendly method for issuing parking tickets and handling their payments.
 
 
+# TASK 3
+
+## SPIKE simulation and verification with -O1 and -OFast 
 
 
 
