@@ -183,14 +183,15 @@ The given C program effectively illustrates the essential functions of an Automa
 
 ## SPIKE simulation and verification with -O1 and -OFast 
 
-+ Execute your RISC-V program using the SPIKE RISC-V ISA simulator to perform a detailed simulation.
++ Execute the RISC-V program using the SPIKE RISC-V ISA simulator to perform a detailed simulation.
 
 + Test and verify the program's behavior under two different optimization levels:
+  
+O1: Apply basic optimizations that enhance performance while keeping compilation time reasonable.
 
--O1: Apply basic optimizations that enhance performance while keeping compilation time reasonable.
--Ofast: Apply aggressive optimizations to maximize performance, even if it means sacrificing strict standards compliance.
+Ofast: Apply aggressive optimizations to maximize performance, even if it means sacrificing strict standards compliance.
 
-+ Utilize the RISC-V objdump tool to disassemble the program's binary, translating the machine code into a human-readable assembly format.
++ Utilize the RISC-V `objdump` tool to disassemble the program's binary, translating the machine code into a human-readable assembly format.
 
 
 
