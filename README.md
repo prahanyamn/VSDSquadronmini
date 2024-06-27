@@ -193,7 +193,17 @@ Ofast: Apply aggressive optimizations to maximize performance, even if it means 
 
 + Utilize the RISC-V `objdump` tool to disassemble the program's binary, translating the machine code into a human-readable assembly format.
 
+### 1. Compile with Optimization Level -O1:
 
+Compile your RISC-V program with the -O1 optimization level to apply basic optimizations that improve performance without significantly increasing compilation time.
+
+`riscv64-unknown-elf-gcc -O1 -o program_O1 program.c`
+
+### 2. Compile with Optimization Level -Ofast:
+
+Compile your RISC-V program with the -Ofast optimization level to apply aggressive optimizations for maximum performance, which might break strict standards compliance.
+
+`riscv64-unknown-elf-gcc -Ofast -o program_Ofast program.c`
 
 
 
