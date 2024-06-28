@@ -205,6 +205,32 @@ Compile your RISC-V program with the -Ofast optimization level to apply aggressi
 
 `riscv64-unknown-elf-gcc -Ofast -o program_Ofast program.c`
 
+![Screenshot from 2024-06-27 11-28-13](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/84ead37d-304e-430c-ade3-5f4a10ac4b2a)
+
+Command: `riscv64-unknown-elf-objdump -d ticketterminal.o |less`
+
+
+### 3. Spike simulation
+
+Command : `spike pk ticketterminal.o`
+
+![Screenshot from 2024-06-27 11-27-57](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/30fa5f94-4ba5-4bfd-b1ad-93e33230cb6a)
+
+### 4. Disassembling Binaries with objdump:
+
++ To debug the spike, start with the following command: `spike -d pk ticketterminal.o`
+
++ Next, use the command `until pc 0 100b0`. This sets the program counter to run from 0 up to the address 100b0, which is the first line of the main function.
+
++ To find the contents of the code at this address, use the command: `reg 0 sp`
+
++ This will display the contents at address 100b0. To view the contents of the subsequent lines, simply press ENTER.
+
++ Initially, the value of the stack pointer (sp) is `0x0000003ffffffb40`. After the next step, the stack pointer value decreases by a hexadecimal amount, resulting in `0x0000003ffffffac0`.
+
++ By subtracting these two main function values, the result is `0x000000ffffffac0`.
+
+
 
 
 
