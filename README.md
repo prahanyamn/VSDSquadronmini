@@ -193,13 +193,9 @@ Ofast: Apply aggressive optimizations to maximize performance, even if it means 
 
 + Utilize the RISC-V `objdump` tool to disassemble the program's binary, translating the machine code into a human-readable assembly format.
 
-### 1. Compile with Optimization Level -O1:
-
 + Compile your RISC-V program with the -O1 optimization level to apply basic optimizations that improve performance without significantly increasing compilation time.
 
 `riscv64-unknown-elf-gcc -O1 -o program_O1 program.c`
-
-### 2. Compile with Optimization Level -Ofast:
 
 + Compile your RISC-V program with the -Ofast optimization level to apply aggressive optimizations for maximum performance, which might break strict standards compliance.
 
@@ -211,22 +207,15 @@ Ofast: Apply aggressive optimizations to maximize performance, even if it means 
 
 ![Screenshot from 2024-06-27 11-28-34](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/da3a3cfd-eae8-442d-9c16-d3a034b2f15b)
 
-
-### 3. Spike simulation
-
 + Command : `spike pk ticketterminal.o`
 
 ![Screenshot from 2024-06-27 11-27-57](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/30fa5f94-4ba5-4bfd-b1ad-93e33230cb6a)
-
-### 4. Disassembling Binaries with objdump:
 
 + To debug the spike, start with the following command: `spike -d pk ticketterminal.o`
 
 + Next, use the command `until pc 0 100b0`. This sets the program counter to run from 0 up to the address 100b0, which is the first line of the main function.
 
 + To find the contents of the code at this address, use the command: `reg 0 sp`
-
-+ This will display the contents at address 100b0. To view the contents of the subsequent lines, simply press ENTER.
 
 + Initially, the value of the stack pointer (sp) is `0x0000003ffffffb40`. After the next step, the stack pointer value decreases by a hexadecimal amount, resulting in `0x0000003ffffffac0`.
 
