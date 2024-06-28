@@ -209,6 +209,8 @@ Compile your RISC-V program with the -Ofast optimization level to apply aggressi
 
 Command: `riscv64-unknown-elf-objdump -d ticketterminal.o |less`
 
+![Screenshot from 2024-06-27 11-28-34](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/da3a3cfd-eae8-442d-9c16-d3a034b2f15b)
+
 
 ### 3. Spike simulation
 
@@ -230,6 +232,7 @@ Command : `spike pk ticketterminal.o`
 
 + By subtracting these two main function values, the result is `0x000000ffffffac0`.
 
+![Screenshot from 2024-06-27 11-31-02](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/7a81121d-03f3-40b1-85fc-bc642ca073f3)
 
 
 
