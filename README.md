@@ -195,26 +195,26 @@ Ofast: Apply aggressive optimizations to maximize performance, even if it means 
 
 ### 1. Compile with Optimization Level -O1:
 
-Compile your RISC-V program with the -O1 optimization level to apply basic optimizations that improve performance without significantly increasing compilation time.
++ Compile your RISC-V program with the -O1 optimization level to apply basic optimizations that improve performance without significantly increasing compilation time.
 
 `riscv64-unknown-elf-gcc -O1 -o program_O1 program.c`
 
 ### 2. Compile with Optimization Level -Ofast:
 
-Compile your RISC-V program with the -Ofast optimization level to apply aggressive optimizations for maximum performance, which might break strict standards compliance.
++ Compile your RISC-V program with the -Ofast optimization level to apply aggressive optimizations for maximum performance, which might break strict standards compliance.
 
 `riscv64-unknown-elf-gcc -Ofast -o program_Ofast program.c`
 
 ![Screenshot from 2024-06-27 11-28-13](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/84ead37d-304e-430c-ade3-5f4a10ac4b2a)
 
-Command: `riscv64-unknown-elf-objdump -d ticketterminal.o |less`
++ Command: `riscv64-unknown-elf-objdump -d ticketterminal.o |less`
 
 ![Screenshot from 2024-06-27 11-28-34](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/da3a3cfd-eae8-442d-9c16-d3a034b2f15b)
 
 
 ### 3. Spike simulation
 
-Command : `spike pk ticketterminal.o`
++ Command : `spike pk ticketterminal.o`
 
 ![Screenshot from 2024-06-27 11-27-57](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/30fa5f94-4ba5-4bfd-b1ad-93e33230cb6a)
 
