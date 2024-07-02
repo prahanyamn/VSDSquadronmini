@@ -224,13 +224,272 @@ Ofast: Apply aggressive optimizations to maximize performance, even if it means 
 ![Screenshot from 2024-06-27 11-31-02](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/7a81121d-03f3-40b1-85fc-bc642ca073f3)
 
 
+# Identify various RISC-V instruction type (R, I, S, B, U, J) and exact 32-bit instruction code in the instruction type format for below RISC-V instructions
 
+ADD r1, r2, r3
 
+SUB r3, r1, r2
 
+AND r2, r1, r3
 
+OR r8, r2, r5
 
+XOR r8, r1, r4
 
+SLT r10, r2, r4
 
+ADDI r12, r3, 5
 
+SW r3, r1, 4
 
+SRL r16, r11, r2
+
+BNE r0, r1, 20
+
+BEQ r0, r0, 15
+
+LW r13, r11, 2
+
+SLL r15, r11, r2
+
+To identify and construct the 32-bit instruction codes for the given RISC-V instructions, we need to follow the RISC-V instruction format for each type (R, I, S, B, U, J). Here are the steps:
+
++ Identify the instruction type for each instruction.
+
++ Determine the opcode, funct3, and funct7 (if applicable) values for each instruction.
+
++ Fill in the fields (opcode, rd, funct3, rs1, rs2, funct7, imm) to construct the 32-bit binary instruction.
+
+### Instruction Types and Fields
+
++ R-type: opcode[6:0] | rd[11:7] | funct3[14:12] | rs1[19:15] | rs2[24:20] | funct7[31:25]
++ I-type: opcode[6:0] | rd[11:7] | funct3[14:12] | rs1[19:15] | imm[31:20]
++ S-type: opcode[6:0] | imm[4:0][11:7] | funct3[14:12] | rs1[19:15] | rs2[24:20] | imm[11:5][31:25]
++ B-type: opcode[6:0] | imm[11][7] | imm[4:1][11:8] | funct3[14:12] | rs1[19:15] | rs2[24:20] | imm[10:5][31:25] | imm[12][31]
++ U-type: opcode[6:0] | rd[11:7] | imm[31:12]
++ J-type: opcode[6:0] | rd[11:7] | imm[19:12][20] | imm[10:1][11] | imm[31:21]
+
+#### ADD r1, r2, r3
+
+Type: R
+
+Opcode: 0110011
+
+Funct3: 000
+
+Funct7: 0000000
+
+rs1: r2 = 00010
+
+rs2: r3 = 00011
+
+rd: r1 = 00001
+
+32-bit: 0000000 00011 00010 000 00001 0110011
+
+#### SUB r3, r1, r2
+
+Type: R
+
+Opcode: 0110011
+
+Funct3: 000
+
+Funct7: 0100000
+
+rs1: r1 = 00001
+
+rs2: r2 = 00010
+
+rd: r3 = 00011
+
+32-bit: 0100000 00010 00001 000 00011 0110011
+
+#### AND r2, r1, r3
+
+Type: R
+
+Opcode: 0110011
+
+Funct3: 111
+
+Funct7: 0000000
+
+rs1: r1 = 00001
+
+rs2: r3 = 00011
+
+rd: r2 = 00010
+
+32-bit: 0000000 00011 00001 111 00010 0110011
+
+#### OR r8, r2, r5
+
+Type: R
+
+Opcode: 0110011
+
+Funct3: 110
+
+Funct7: 0000000
+
+rs1: r2 = 00010
+
+rs2: r5 = 00101
+
+rd: r8 = 01000
+
+32-bit: 0000000 00101 00010 110 01000 0110011
+
+#### XOR r8, r1, r4
+
+Type: R
+
+Opcode: 0110011
+
+Funct3: 100
+
+Funct7: 0000000
+
+rs1: r1 = 00001
+
+rs2: r4 = 00100
+
+rd: r8 = 01000
+
+32-bit: 0000000 00100 00001 100 01000 0110011
+
+#### SLT r10, r2, r4
+
+Type: R
+
+Opcode: 0110011
+
+Funct3: 010
+
+Funct7: 0000000
+
+rs1: r2 = 00010
+
+rs2: r4 = 00100
+
+rd: r10 = 01010
+
+32-bit: 0000000 00100 00010 010 01010 0110011
+
+#### ADDI r12, r3, 5
+
+Type: I
+
+Opcode: 0010011
+
+Funct3: 000
+
+rs1: r3 = 00011
+
+rd: r12 = 01100
+
+imm: 000000000101
+
+32-bit: 000000000101 00011 000 01100 0010011
+
+#### SW r3, r1, 4
+
+Type: S
+
+Opcode: 0100011
+
+Funct3: 010
+
+rs1: r1 = 00001
+
+rs2: r3 = 00011
+
+imm: 0000000 | 4 (00000 | 00100)
+
+32-bit: 0000000 00011 00001 010 00100 0100011
+
+#### SRL r16, r11, r2
+
+Type: R
+
+Opcode: 0110011
+
+Funct3: 101
+
+Funct7: 0000000
+
+rs1: r11 = 01011
+
+rs2: r2 = 00010
+
+rd: r16 = 10000
+
+32-bit: 0000000 00010 01011 101 10000 0110011
+
+#### BNE r0, r1, 20
+
+Type: B
+
+Opcode: 1100011
+
+Funct3: 001
+
+rs1: r0 = 00000
+
+rs2: r1 = 00001
+
+imm: 20 (00000 | 00101 | 0 | 0000)
+
+32-bit: 00000 00101 000 00000 00001 1100011
+
+#### BEQ r0, r0, 15
+
+Type: B
+
+Opcode: 1100011
+
+Funct3: 000
+
+rs1: r0 = 00000
+
+rs2: r0 = 00000
+
+imm: 15 (0000 | 0011 | 1 | 0000)
+
+32-bit: 00000 00111 000 00000 00000 1100011
+
+#### LW r13, r11, 2
+
+Type: I
+
+Opcode: 0000011
+
+Funct3: 010
+
+rs1: r11 = 01011
+
+rd: r13 = 01101
+
+imm: 000000000010
+
+32-bit: 000000000010 01011 010 01101 0000011
+
+#### SLL r15, r11, r2
+
+Type: R
+
+Opcode: 0110011
+
+Funct3: 001
+
+Funct7: 0000000
+
+rs1: r11 = 01011
+
+rs2: r2 = 00010
+
+rd: r15 = 01111
+
+32-bit: 0000000 00010 01011 001 01111 0110011
 
