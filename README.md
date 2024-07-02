@@ -223,8 +223,9 @@ Ofast: Apply aggressive optimizations to maximize performance, even if it means 
 
 ![Screenshot from 2024-06-27 11-31-02](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/7a81121d-03f3-40b1-85fc-bc642ca073f3)
 
+# TASK 4
 
-# Identify various RISC-V instruction type (R, I, S, B, U, J) and exact 32-bit instruction code in the instruction type format for below RISC-V instructions
+## Identify various RISC-V instruction type (R, I, S, B, U, J) and exact 32-bit instruction code in the instruction type format for below RISC-V instructions
 
 ADD r1, r2, r3
 
@@ -269,7 +270,7 @@ To identify and construct the 32-bit instruction codes for the given RISC-V inst
 + U-type: opcode[6:0] | rd[11:7] | imm[31:12]
 + J-type: opcode[6:0] | rd[11:7] | imm[19:12][20] | imm[10:1][11] | imm[31:21]
 
-#### ADD r1, r2, r3
+#### 1. ADD r1, r2, r3
 
 Type: R
 
@@ -287,7 +288,7 @@ rd: r1 = 00001
 
 32-bit: 0000000 00011 00010 000 00001 0110011
 
-#### SUB r3, r1, r2
+#### 2. SUB r3, r1, r2
 
 Type: R
 
@@ -305,7 +306,7 @@ rd: r3 = 00011
 
 32-bit: 0100000 00010 00001 000 00011 0110011
 
-#### AND r2, r1, r3
+#### 3. AND r2, r1, r3
 
 Type: R
 
@@ -323,7 +324,7 @@ rd: r2 = 00010
 
 32-bit: 0000000 00011 00001 111 00010 0110011
 
-#### OR r8, r2, r5
+#### 4. OR r8, r2, r5
 
 Type: R
 
@@ -341,7 +342,7 @@ rd: r8 = 01000
 
 32-bit: 0000000 00101 00010 110 01000 0110011
 
-#### XOR r8, r1, r4
+#### 5. XOR r8, r1, r4
 
 Type: R
 
@@ -359,7 +360,7 @@ rd: r8 = 01000
 
 32-bit: 0000000 00100 00001 100 01000 0110011
 
-#### SLT r10, r2, r4
+#### 6. SLT r10, r2, r4
 
 Type: R
 
@@ -377,7 +378,7 @@ rd: r10 = 01010
 
 32-bit: 0000000 00100 00010 010 01010 0110011
 
-#### ADDI r12, r3, 5
+#### 7. ADDI r12, r3, 5
 
 Type: I
 
@@ -393,7 +394,7 @@ imm: 000000000101
 
 32-bit: 000000000101 00011 000 01100 0010011
 
-#### SW r3, r1, 4
+#### 8. SW r3, r1, 4
 
 Type: S
 
@@ -409,7 +410,7 @@ imm: 0000000 | 4 (00000 | 00100)
 
 32-bit: 0000000 00011 00001 010 00100 0100011
 
-#### SRL r16, r11, r2
+#### 9. SRL r16, r11, r2
 
 Type: R
 
@@ -427,7 +428,7 @@ rd: r16 = 10000
 
 32-bit: 0000000 00010 01011 101 10000 0110011
 
-#### BNE r0, r1, 20
+#### 10. BNE r0, r1, 20
 
 Type: B
 
@@ -443,7 +444,7 @@ imm: 20 (00000 | 00101 | 0 | 0000)
 
 32-bit: 00000 00101 000 00000 00001 1100011
 
-#### BEQ r0, r0, 15
+#### 11. BEQ r0, r0, 15
 
 Type: B
 
@@ -459,7 +460,7 @@ imm: 15 (0000 | 0011 | 1 | 0000)
 
 32-bit: 00000 00111 000 00000 00000 1100011
 
-#### LW r13, r11, 2
+#### 12. LW r13, r11, 2
 
 Type: I
 
@@ -475,7 +476,7 @@ imm: 000000000010
 
 32-bit: 000000000010 01011 010 01101 0000011
 
-#### SLL r15, r11, r2
+#### 13. SLL r15, r11, r2
 
 Type: R
 
