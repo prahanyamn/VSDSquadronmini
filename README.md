@@ -509,3 +509,72 @@ SRL r16, r11, r2: 0000000 00010 01011 101 10000 0110011
 BNE r0, r1, 20: 00000 00101 000 00000 00001 1100011
 BEQ r0, r0, 15: 00000 00111 000 00000
  ```
+
+# TASK 5
+
+### RISC-V Core Verilog netlist and Testbench for Functional simulation
+
+##### Acknowledgements Section :
+
+`https://github.com/vinayrayapati/rv32i/`
+
+I have developed a set of commands and achieved the desired output for my project. This was accomplished by referece above and the key sources, which provided valuable guidance and examples. These references were in understanding the required techniques and applying them effectively in my implementation.
+
+### REFERENCE-DRIVEN DEVELOPMENT
+
++ Cloning is the process of making a local duplicate of a remote repository. This enables you to have a full copy of the repository on your local machine.
++ Command 1 : `git clone http://github.com/vinayrayapati/rv32i.git my_pticket_rv32i`
++ Command 2 : `cd my_pticket_rv32i`
+
+  ![WhatsApp Image 2024-07-08 at 22 08 21_2eb938bb](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/06350337-8907-4545-bee5-dda2500e002b)
+
++ This will download the project into a local directory named my_pticket_rv32i.
+
++ Command 3 : `sudo apt update`
++ Command 4 : `sudo apt install inverilog gtkwave`
+
+  ![WhatsApp Image 2024-07-08 at 22 08 21_39a144d3](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/83aa8d3c-96a7-41f5-91cf-4d50c86d584c)
+
+  ![WhatsApp Image 2024-07-08 at 22 08 57_739d76b7](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/2f966fff-99b1-4f1d-a3e9-1a75c6338f84)
+
+### OUTPUT
+
+##### 1. ADD (r1,r2,r3)
+
+![WhatsApp Image 2024-07-08 at 21 53 54_5a16b143](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/d6ed1a26-27e9-4990-81eb-5fca0118dceb)
+
+##### 2. SUB (r3,r1,r2)
+
+![WhatsApp Image 2024-07-08 at 21 53 55_febe4122](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/2f40ba19-d4c8-48ec-b834-ef34ee74ce51)
+
+##### 3. AND (r2,r1,r3)
+
+![WhatsApp Image 2024-07-08 at 21 53 54_3827bd8e](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/41e6c73e-3990-4042-82b2-996d8df185b6)
+
+##### 4. OR (r8,r2,r5)
+
+![WhatsApp Image 2024-07-08 at 21 53 55_b75bbd5a](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/093512bc-bc72-4f91-b086-4265d0821708)
+
+##### 5. XOR (r8,r1,r4)
+
+![WhatsApp Image 2024-07-08 at 21 53 56_1e70e0a0](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/02708dee-6911-4963-a331-b004ce02629c)
+
+##### 6. SLT (r10,r2,r4)
+
+![WhatsApp Image 2024-07-08 at 21 53 55_e116fac1](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/6c28a740-fe33-4ae2-9e68-43e0cf000c93)
+
+##### 7. BEQ (r0,r0,15)
+
+![WhatsApp Image 2024-07-08 at 21 53 55_d5b95de4](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/60f19ca7-880d-4995-b2cf-674c8ea88226)
+
+##### 8. BNE (r0,r1,20)
+
+![WhatsApp Image 2024-07-08 at 21 53 55_e357e9a1](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/f8805642-a73c-4920-9848-427f896e8f2b)
+
+##### 9. SLL (r15,r11,r2)
+
+![WhatsApp Image 2024-07-08 at 21 53 56_4068577a](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/76922407-c6b8-4c59-a458-b318f9805f1d)
+
+##### 10. GTKWAVE WINDOW
+
+![image](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/d3294079-1007-4cc3-94bb-ef6176ebcf0e)
