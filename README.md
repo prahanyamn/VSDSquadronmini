@@ -613,56 +613,56 @@ Model: 4-channel relay module.
 
 1. LCD Display:
 
-RS: Digital Pin 2
+   + RS: Digital Pin 2
 
-EN: Digital Pin 3
+   + EN: Digital Pin 3
 
-D4: Digital Pin 4
+   + D4: Digital Pin 4
 
-D5: Digital Pin 5
+   + D5: Digital Pin 5
 
-D6: Digital Pin 6
+   + D6: Digital Pin 6
 
-D7: Digital Pin 7
+   + D7: Digital Pin 7
 
 2. Keypad:
 
-R1: Digital Pin 8
+   + R1: Digital Pin 8
 
-R2: Digital Pin 9
+   + R2: Digital Pin 9
 
-R3: Digital Pin 10
+   + R3: Digital Pin 10
 
-R4: Digital Pin 11
+   + R4: Digital Pin 11
 
-C1: Digital Pin 12
+   + C1: Digital Pin 12
 
-C2: Digital Pin 13
+   + C2: Digital Pin 13
 
-C3: Digital Pin A0
+   + C3: Digital Pin A0
 
-C4: Digital Pin A1
+   + C4: Digital Pin A1
 
 3. Thermal Printer:
 
-TX: Digital Pin A2
+   + TX: Digital Pin A2
 
-RX: Digital Pin A3
+   + RX: Digital Pin A3
 
 4. Coin Acceptor:
 
-Signal: Digital Pin A4
+   + Signal: Digital Pin A4
 
 5. Card Reader:
 
-Data: Digital Pin A5
+   + Data: Digital Pin A5
 
 6. Barrier Gate:
 
-Control: Relay Module (connected to Digital Pins 14-17 for 4-channel)
+   + Control: Relay Module (connected to Digital Pins 14-17 for 4-channel)
 
 7. Real-Time Clock (RTC):
 
-SDA: Digital Pin A6
+   + SDA: Digital Pin A6
 
-SCL: Digital Pin A7
+   + SCL: Digital Pin A7
