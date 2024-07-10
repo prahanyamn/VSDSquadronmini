@@ -675,3 +675,58 @@ Model: 4-channel relay module.
    + SDA: Digital Pin A6
 
    + SCL: Digital Pin A7
+
+### Code
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int current_ticket = 0;
+
+void issue_ticket() {
+    current_ticket++;
+    printf("Ticket issued: %d\n", current_ticket);
+}
+
+void pay_ticket(int ticket_number) {
+    if (ticket_number <= current_ticket && ticket_number > 0) {
+        printf("Ticket %d has been paid.\n", ticket_number);
+    } else {
+        printf("Invalid ticket number.\n");
+    }
+}
+
+void show_menu() {
+    printf("1. Issue Ticket\n");
+    printf("2. Pay Ticket\n");
+    printf("3. Exit\n");
+}
+
+int main() {
+    int choice, ticket_number;
+
+    while (1) {
+        show_menu();
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                issue_ticket();
+                break;
+            case 2:
+                printf("Enter ticket number to pay: ");
+                scanf("%d", &ticket_number);
+                pay_ticket(ticket_number);
+                break;
+            case 3:
+                exit(0);
+            default:
+                printf("Invalid choice. Please try again.\n");
+        }
+    }
+
+    return 0;
+}
+```
