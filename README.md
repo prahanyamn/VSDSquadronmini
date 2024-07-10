@@ -578,3 +578,91 @@ I have developed a set of commands and achieved the desired output for my projec
 ##### 10. GTKWAVE WINDOW
 
 ![image](https://github.com/prahanyamn/VSDSquadronmini/assets/173597769/d3294079-1007-4cc3-94bb-ef6176ebcf0e)
+
+
+# TASK 6
+
+## PROJECT : Ticket Terminal Designer: Developing an Automated Parking Ticket Vending Machine
+
+### Overview
+
+The project involves designing an Automated Parking Ticket Vending Machine using the VSDSquadron mini microcontroller. The machine will automate the process of issuing parking tickets, managing payments, and controlling entry/exit barriers. The system will include components for user interaction, payment processing, ticket printing, and barrier control.
+
+### Components Required
+
+1. VSDSquadron mini: The core microcontroller for processing and control.
+2. LCD Display: For displaying instructions, ticket details, and payment information.
+Model: 16x2 or 20x4 character LCD.
+3. Keypad: For user input, such as selecting options and entering data.
+Model: 4x4 matrix keypad.
+4. Thermal Printer: For printing parking tickets.
+Model: 58mm or 80mm thermal printer.
+5. Coin Acceptor: For accepting coin payments.
+Model: Multi-coin acceptor.
+6. Card Reader: For accepting card payments.
+Model: Magnetic stripe or RFID card reader.
+7. Real-Time Clock (RTC): For time-stamping tickets.
+Model: DS3231.
+8. Power Supply: To power all components.
+Model: 12V/5A power supply.
+9. Relay Module: To control high-power components like the barrier gate.
+Model: 4-channel relay module.
+10. Miscellaneous: Connectors, resistors, capacitors, and wiring.
+
+### Pin Diagram
+
+1. LCD Display:
+
+RS: Digital Pin 2
+
+EN: Digital Pin 3
+
+D4: Digital Pin 4
+
+D5: Digital Pin 5
+
+D6: Digital Pin 6
+
+D7: Digital Pin 7
+
+2. Keypad:
+
+R1: Digital Pin 8
+
+R2: Digital Pin 9
+
+R3: Digital Pin 10
+
+R4: Digital Pin 11
+
+C1: Digital Pin 12
+
+C2: Digital Pin 13
+
+C3: Digital Pin A0
+
+C4: Digital Pin A1
+
+3. Thermal Printer:
+
+TX: Digital Pin A2
+
+RX: Digital Pin A3
+
+4. Coin Acceptor:
+
+Signal: Digital Pin A4
+
+5. Card Reader:
+
+Data: Digital Pin A5
+
+6. Barrier Gate:
+
+Control: Relay Module (connected to Digital Pins 14-17 for 4-channel)
+
+7. Real-Time Clock (RTC):
+
+SDA: Digital Pin A6
+
+SCL: Digital Pin A7
