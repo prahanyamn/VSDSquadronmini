@@ -591,22 +591,31 @@ The project involves designing an Automated Parking Ticket Vending Machine using
 ### Components Required
 
 1. VSDSquadron mini: The core microcontroller for processing and control.
+
 2. LCD Display: For displaying instructions, ticket details, and payment information.
 Model: 16x2 or 20x4 character LCD.
+
 3. Keypad: For user input, such as selecting options and entering data.
 Model: 4x4 matrix keypad.
+
 4. Thermal Printer: For printing parking tickets.
 Model: 58mm or 80mm thermal printer.
+
 5. Coin Acceptor: For accepting coin payments.
 Model: Multi-coin acceptor.
+
 6. Card Reader: For accepting card payments.
 Model: Magnetic stripe or RFID card reader.
+
 7. Real-Time Clock (RTC): For time-stamping tickets.
 Model: DS3231.
+
 8. Power Supply: To power all components.
 Model: 12V/5A power supply.
+
 9. Relay Module: To control high-power components like the barrier gate.
 Model: 4-channel relay module.
+
 10. Miscellaneous: Connectors, resistors, capacitors, and wiring.
 
 ### Pin Diagram
