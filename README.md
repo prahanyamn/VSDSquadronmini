@@ -679,58 +679,63 @@ Model: 4-channel relay module.
 ### Code
 
 ```
-#include <stdio.h>
-#include <stdlib.h>
+#include <debug.h>
+#include <ch32v00x.h>
+#include <ch32v00x_gpio.h>
 
-int current_ticket = 0;
+// Define GPIO pins
+#define BUTTON_PIN GPIO_Pin_0
+#define LED_PIN GPIO_Pin_1
 
-void issue_ticket() {
-    current_ticket++;
-    printf("Ticket issued: %d\n", current_ticket);
-}
+void GPIO_Config(void);
 
-void pay_ticket(int ticket_number) {
-    if (ticket_number <= current_ticket && ticket_number > 0) {
-        printf("Ticket %d has been paid.\n", ticket_number);
-    } else {
-        printf("Invalid ticket number.\n");
-    }
-}
-
-void show_menu() {
-    printf("1. Issue Ticket\n");
-    printf("2. Pay Ticket\n");
-    printf("3. Exit\n");
-}
-
-int main() {
-    int choice, ticket_number;
-
-    while (1) {
-        show_menu();
-        printf("Enter your choice: ");
-        scanf("%d", &choice);
-
-        switch (choice) {
-            case 1:
-                issue_ticket();
-                break;
-            case 2:
-                printf("Enter ticket number to pay: ");
-                scanf("%d", &ticket_number);
-                pay_ticket(ticket_number);
-                break;
-            case 3:
-                exit(0);
-            default:
-                printf("Invalid choice. Please try again.\n");
+int main(void)
+{
+    SystemInit();        // Initialize the system
+    GPIO_Config();       // Configure GPIOs
+    
+    while(1)
+    {
+        // Check if the button is pressed
+        if(GPIO_ReadInputDataBit(GPIOA, BUTTON_PIN) == Bit_SET)
+        {
+            // Button is pressed
+            GPIO_SetBits(GPIOA, LED_PIN);  // Turn on LED to indicate ticket issuance
+            
+            // Add code to issue a ticket here
+            
+            // Simple delay for debouncing and visual confirmation
+            for(int i = 0; i < 1000000; i++);
+            
+            GPIO_ResetBits(GPIOA, LED_PIN); // Turn off LED
+            
+            // Simple delay to avoid multiple ticket issuance in quick succession
+            for(int i = 0; i < 1000000; i++);
         }
     }
+}
 
-    return 0;
+void GPIO_Config(void)
+{
+    GPIO_InitTypeDef GPIO_InitStructure;
+    
+    // Enable GPIO clock for GPIOA
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+    
+    // Configure BUTTON_PIN as input floating
+    GPIO_InitStructure.GPIO_Pin = BUTTON_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
+    
+    // Configure LED_PIN as output push-pull
+    GPIO_InitStructure.GPIO_Pin = LED_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
 }
 ```
 ## Demonstration project
 
-https://drive.google.com/file/d/1RNA-wkhyhNNphefKDWd2rq-aG38ij_4a/view?usp=sharing
+https://drive.google.com/file/d/12l7cn-tgSHG3Exg84Dd9fAYmasUyXywP/view?usp=sharing
+
 
