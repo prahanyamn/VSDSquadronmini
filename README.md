@@ -676,7 +676,7 @@ Model: 4-channel relay module.
 
    + SCL: Digital Pin A7
 
-'''
+```
 +--------------------------------------------------+
 |                   VSDS Quadron Mini              |
 +--------------------------------------------------+
@@ -708,7 +708,7 @@ Model: 4-channel relay module.
 |  Analog Pin A7 (SCL for RTC)                     |
 +--------------------------------------------------+
 
-'''
+```
 
 ### Code
 
