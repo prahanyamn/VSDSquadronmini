@@ -676,6 +676,40 @@ Model: 4-channel relay module.
 
    + SCL: Digital Pin A7
 
+'''
++--------------------------------------------------+
+|                   VSDS Quadron Mini              |
++--------------------------------------------------+
+|  Digital Pin 0 (RX)                              |
+|  Digital Pin 1 (TX)                              |
+|  Digital Pin 2 (RS for LCD)                      |
+|  Digital Pin 3 (EN for LCD)                      |
+|  Digital Pin 4 (D4 for LCD)                      |
+|  Digital Pin 5 (D5 for LCD)                      |
+|  Digital Pin 6 (D6 for LCD)                      |
+|  Digital Pin 7 (D7 for LCD)                      |
+|  Digital Pin 8 (R1 for Keypad)                   |
+|  Digital Pin 9 (R2 for Keypad)                   |
+|  Digital Pin 10 (R3 for Keypad)                  |
+|  Digital Pin 11 (R4 for Keypad)                  |
+|  Digital Pin 12 (C1 for Keypad)                  |
+|  Digital Pin 13 (C2 for Keypad)                  |
+|  Analog Pin A0 (C3 for Keypad)                   |
+|  Analog Pin A1 (C4 for Keypad)                   |
+|  Analog Pin A2 (TX for Thermal Printer)          |
+|  Analog Pin A3 (RX for Thermal Printer)          |
+|  Analog Pin A4 (Signal for Coin Acceptor)        |
+|  Analog Pin A5 (Data for Card Reader)            |
+|  Digital Pin 14 (Relay 1 for Barrier Gate)       |
+|  Digital Pin 15 (Relay 2 for Barrier Gate)       |
+|  Digital Pin 16 (Relay 3 for Barrier Gate)       |
+|  Digital Pin 17 (Relay 4 for Barrier Gate)       |
+|  Analog Pin A6 (SDA for RTC)                     |
+|  Analog Pin A7 (SCL for RTC)                     |
++--------------------------------------------------+
+
+'''
+
 ### Code
 
 ```
